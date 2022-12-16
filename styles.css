@@ -1,4 +1,10 @@
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: rgb(255, 255, 255) !important;
+body{
+    font-family: Helvetica;
 }
+
+.basicRectangle {
+    height: 40px;
+    width: 275px;
+    border-radius: 10px;
+    background-color: rgb(165, 165, 165);
+  }

@@ -4,289 +4,164 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link rel="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="./styles-bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
   </head>
+</html>
 
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-    <nav class="navbar bg-light"> <!--top navbar-->
-      <div class="container-fluid align-items-center">
-        <div class = "d-flex align-items-center">
-          <div class="pe-2"><i class="fab fa-brands fa-instagram fa-2x"></i>
-          </div>
-          <div class="navbar-brand pl-2"><strong>Shinstagram</strong></div>
-        </div>
-        
-        <div class = "d-flex align-items-center">
-          <div class="pe-2">
-            <button type="button pe-2" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a new post</button>
-          </div>
+<div class="card m-3">
+  <div class="card-header">
+    <h2>Payment form example</h2>
+  </div>
 
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label"><strong>Caption:</strong></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Add the caption of your post here:"></textarea>
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-outline-secondary text-dark" class="photo_select"><i class="fas fa-camera"></i></button>
-                    <button type="button" class="btn btn-outline-secondary text-dark" class="geotag"><i class="fas fa-map-marker-alt"></i></button>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-success">Publish</button>
-                </div>
-              </div>
-            </div>
-          </div>
+  <form class="needs-validation" novalidate>
 
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-cog"></i>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">Accesibility & data</a></li>
-              <li><a class="dropdown-item" href="#">Privacy and data</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+  <div class="row p-3">
 
-    <ul class="nav nav-pills justify-content-center pb-3" id="myTab" role="tablist"> <!--view selector-->
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active text-dark" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fas fa-th"></i></button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link text-dark" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fas fa-square"></i></button>
-      </li>
-    </ul>
- 
-    <div class="tab-content" id="myTabContent"> <!-- v grid view -->
-      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"> 
-        <div class="container-fluid">
-          <div class="row justify-content-center gx-1">
-            <div class="col-md-auto p-1" style="height: 350px" style="width: 350px">
-              <img src="https://randomwordgenerator.com/img/picture-generator/55e4d1454254a514f1dc8460962e33791c3ad6e04e507749712e79d2924dcd_640.jpg" class="h-100" style="width: 350px; height: 350px; object-fit: cover;">
-            </div>
-            <div class="col-md-auto p-1"  style="height: 350px">
-              <img src="https://randomwordgenerator.com/img/picture-generator/55e3d1464356a514f1dc8460962e33791c3ad6e04e507441722973d59745c5_640.jpg" class="h-100" style="width: 350px; height: 350px; object-fit: cover;">
-            </div>
-            <div class="col-md-auto p-1 object_fit_class"  style="height: 350px">
-              <img src="https://randomwordgenerator.com/img/picture-generator/57e2d54a4e5ba514f1dc8460962e33791c3ad6e04e507440772d7cdd9344c6_640.jpg" class="h-100" style="width: 350px; height: 350px; object-fit: cover;">
-            </div>
-          </div>
-          <div class="row justify-content-center gx-1">
-            <div class="col-md-auto p-1" style="height: 350px">
-              <img src="https://randomwordgenerator.com/img/picture-generator/55e6d2404d54ad14f1dc8460962e33791c3ad6e04e5074417d2e72d6914cc5_640.jpg" class="h-100" style="width: 350px; height: 350px; object-fit: cover;">
-            </div> 
-            <div class="col-md-auto p-1" style="height: 350px">
-              <img src="https://randomwordgenerator.com/img/picture-generator/pick-and-mix-171342_640.jpg" class="h-100" style="width: 350px; height: 350px; object-fit: cover;">
-            </div>
-            <div class="col-md-auto p-1" style="height: 350px">  
-              <img src="https://randomwordgenerator.com/img/picture-generator/54e9d5414c5aaa14f1dc8460962e33791c3ad6e04e507440742a7ed0954ac1_640.jpg" class="h-100" style="width: 350px; height: 350px; object-fit: cover;">
-            </div>
-          </div>
-          <div class="row justify-content-center gx-1">
-            <div class="col-md-auto p-1" style="height: 350px">
-              <img src="https://randomwordgenerator.com/img/picture-generator/54e7d1434d57ad14f1dc8460962e33791c3ad6e04e50744172297cd6904fc1_640.jpg" class="h-100" style="width: 350px; height: 350px; object-fit: cover;">
-            </div>
-            <div class="col-md-auto p-1" style="height: 350px">
-              <img src="https://randomwordgenerator.com/img/picture-generator/54e7d1454953ae14f1dc8460962e33791c3ad6e04e5074417c2e7dd3904dc5_640.jpg" class="h-100" style="width: 350px; height: 350px; object-fit: cover;">
-            </div>  
-            <div class="col-md-auto p-1" style="height: 350px">  
-              <img src="https://randomwordgenerator.com/img/picture-generator/53e9dc464853b10ff3d8992cc12c30771037dbf85254794e732872d69545_640.jpg" class="h-100" style="width: 350px; height: 350px; object-fit: cover;">
-            </div>
-          </div>
+    <div class="col-5">
+      <label for="inputCardNum" class="form-label">Card #</label>
+      <div class="input-group has-validation">
+      <input type="text" class="form-control has-validation" id="inputCardNum" required>
+        <div class="invalid-feedback">
+          Please input a valid card number
         </div>
-      </div>
-      
-    <!-- v column view -->
-    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"> <!--card display-->
-    
-      <div class="row-cols-1 p-3 d-flex align-items-center justify-content-center">
-        <div class="col card" style="width: 40rem;">
-          <div class="d-flex align-items-center">
-            <div class="card-body pb-1 pt-1">
-              <p class="card-text fs-5">The Ultimate Guide To Eggs</p>
-            </div>
-            <div class="card-body pb-2 pt-2">
-              <p class="text-end fw-light fs-6">11/12</p>
-            </div>
-          </div>
-          <img src="https://randomwordgenerator.com/img/picture-generator/55e4d1454254a514f1dc8460962e33791c3ad6e04e507749712e79d2924dcd_640.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text fw-bold mb-0">17175 likes</p>
-            <p class="card-text mb-1">This is an example of a really good picture you can post on Instagram.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row-cols-1 p-3 d-flex align-items-center justify-content-center">
-        <div class="col card" style="width: 40rem;">
-          <div class="d-flex align-items-center">
-            <div class="card-body pb-1 pt-1">
-              <p class="card-text fs-5">Don't Fall For This Garden Scam</p>
-            </div>
-            <div class="card-body pb-2 pt-2">
-              <p class="text-end fw-light fs-6">12/12</p>
-            </div>
-          </div>
-          <img src="https://randomwordgenerator.com/img/picture-generator/55e3d1464356a514f1dc8460962e33791c3ad6e04e507441722973d59745c5_640.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text fw-bold mb-0">47389 likes</p>
-            <p class="card-text mb-1">This is an example of a really good picture you can post on Instagram.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row-cols-1 p-3 d-flex align-items-center justify-content-center">
-        <div class="col card" style="width: 40rem;">
-          <div class="d-flex align-items-center">
-            <div class="card-body pb-1 pt-1">
-              <p class="card-text fs-5">Why I'll Never Pay Rent</p>
-            </div>
-            <div class="card-body pb-2 pt-2">
-              <p class="text-end fw-light fs-6">14/12</p>
-            </div>
-          </div>
-          <img src="https://randomwordgenerator.com/img/picture-generator/57e2d54a4e5ba514f1dc8460962e33791c3ad6e04e507440772d7cdd9344c6_640.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text fw-bold mb-0">38405 likes</p>
-            <p class="card-text mb-1">This is an example of a really good picture you can post on Instagram.</p>
-          </div>
-        </div>
-      </div>
-        
-      <div class="row-cols-1 p-3 d-flex align-items-center justify-content-center">
-        <div class="col card" style="width: 40rem;">
-          <div class="d-flex align-items-center">
-            <div class="card-body pb-1 pt-1">
-              <p class="card-text fs-5">Warning: Bottle</p>
-            </div>
-            <div class="card-body pb-2 pt-2">
-              <p class="text-end fw-light fs-6">17/12</p>
-            </div>
-          </div>
-          <img src="https://randomwordgenerator.com/img/picture-generator/55e6d2404d54ad14f1dc8460962e33791c3ad6e04e5074417d2e72d6914cc5_640.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text fw-bold mb-0">11695 likes</p>
-            <p class="card-text mb-1">This is an example of a really good picture you can post on Instagram.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row-cols-1 p-3 d-flex align-items-center justify-content-center">
-        <div class="col card" style="width: 40rem;">
-          <div class="d-flex align-items-center">
-            <div class="card-body pb-1 pt-1">
-              <p class="card-text fs-5">If Candy Is So Bad, Why Don't Statistics Show It?</p>
-            </div>
-            <div class="card-body pb-2 pt-2">
-              <p class="text-end fw-light fs-6">19/12</p>
-            </div>
-          </div>
-          <img src="https://randomwordgenerator.com/img/picture-generator/pick-and-mix-171342_640.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text fw-bold mb-0">17643 likes</p>
-            <p class="card-text mb-1">This is an example of a really good picture you can post on Instagram.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row-cols-1 p-3 d-flex align-items-center justify-content-center">
-        <div class="col card" style="width: 40rem;">
-          <div class="d-flex align-items-center">
-            <div class="card-body pb-1 pt-1">
-              <p class="card-text fs-5">The Anatomy of a Great Beach</p>
-            </div>
-            <div class="card-body pb-2 pt-2">
-              <p class="text-end fw-light fs-6">19/12</p>
-            </div>
-          </div>
-          <img src="https://randomwordgenerator.com/img/picture-generator/54e9d5414c5aaa14f1dc8460962e33791c3ad6e04e507440742a7ed0954ac1_640.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text fw-bold mb-0">49614 likes</p>
-            <p class="card-text mb-1">This is an example of a really good picture you can post on Instagram.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row-cols-1 p-3 d-flex align-items-center justify-content-center">
-        <div class="col card" style="width: 40rem;">
-          <div class="d-flex align-items-center">
-            <div class="card-body pb-1 pt-1">
-              <p class="card-text fs-5">The 6 Best Things About Chestnuts</p>
-            </div>
-            <div class="card-body pb-2 pt-2">
-              <p class="text-end fw-light fs-6">21/12</p>
-            </div>
-          </div>
-          <img src="https://randomwordgenerator.com/img/picture-generator/54e7d1434d57ad14f1dc8460962e33791c3ad6e04e50744172297cd6904fc1_640.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text fw-bold mb-0">32956 likes</p>
-            <p class="card-text mb-1">This is an example of a really good picture you can post on Instagram.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row-cols-1 p-3 d-flex align-items-center justify-content-center">
-        <div class="col card" style="width: 40rem;">
-          <div class="d-flex align-items-center">
-            <div class="card-body pb-1 pt-1">
-              <p class="card-text fs-5">Omg! The Best Rubber Band Ball Ever!</p>
-            </div>
-            <div class="card-body pb-2 pt-2">
-              <p class="text-end fw-light fs-6">23/12</p>
-            </div>
-          </div>
-          <img src="https://randomwordgenerator.com/img/picture-generator/54e7d1454953ae14f1dc8460962e33791c3ad6e04e5074417c2e7dd3904dc5_640.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text fw-bold mb-0">31696 likes</p>
-            <p class="card-text mb-1">This is an example of a really good picture you can post on Instagram.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row-cols-1 p-3 d-flex align-items-center justify-content-center">
-        <div class="col card" style="width: 40rem;">
-          <div class="d-flex align-items-center">
-            <div class="card-body pb-1 pt-1">
-              <p class="card-text fs-5">One Word: Cheese</p>
-            </div>
-            <div class="card-body pb-2 pt-2">
-              <p class="text-end fw-light fs-6">26/12</p>
-            </div>
-          </div>
-          <img src="https://randomwordgenerator.com/img/picture-generator/53e9dc464853b10ff3d8992cc12c30771037dbf85254794e732872d69545_640.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text fw-bold mb-0">16057 likes</p>
-            <p class="card-text mb-1">This is an example of a really good picture you can post on Instagram.</p>
-          </div>
-        </div>
-      </div>
-        
       </div>
     </div>
-  </body>
+
+    <div class="col-3">
+      <label for="inputCVC" class="form-label">CVC #</label>
+      <input type="text" class="form-control has-validation" id="inputCVC" placeholder="000" required>
+      <div class="invalid-feedback">
+        Please input a valid CVC
+      </div>
+    </div>
+
+    <div class="col-4">
+      <label for="inputAmount" class="form-label">Amount</label>
+      <div class="input-group">
+        <span class="input-group-text">$</span>
+        <input type="text" class="form-control" id="inputAmount" placeholder="" required>
+        <div class="invalid-feedback">
+          Please input a valid amount
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row p-3 pt-0">
+
+    <div class="col">
+      <label for="inputFirstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="inputFirstName" required>
+      <div class="invalid-feedback">
+        Please input your first name
+      </div>
+    </div>
+
+    <div class="col">
+      <label for="inputLastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="inputLastName" required>
+      <div class="invalid-feedback">
+        Please input your last name
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row p-3 pt-0">
+
+    <div class="col-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" required>
+      <div class="invalid-feedback">
+        Please input a valid city
+      </div>
+    </div>
+
+    <div class="col-3">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select" required>
+        <option selected disabled value>Pick a state...</option>
+        <option>...</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select your state from the list
+      </div>
+    </div>
+
+    <div class="col-3">
+      <label for="inputZip" class="form-label">Postal Code</label>
+      <input type="text" class="form-control" id="inputZip" required>
+      <div class="invalid-feedback">
+        Please input a valid zip code
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row p-3 me-0">
+
+    <div class="col-6">
+      <label class="pb-2" for="cardTypeSel">We accept:</label>
+        <br>
+        <div class="d-flex form justify-content-center pt-2 basicRectangle">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+            <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard fs-5"></i></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa fs-5"></i></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-amex fs-5"></i></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            <label class="form-check-label" for="inlineRadio4"><i class="fa-brands fa-cc-paypal fs-5"></i></label>
+          </div>
+        </div>  
+    </div>
+
+    <div class="col-6 pe-0 mb-3">
+      <label for="messageArea" class="form-label no-validation">Message</label>
+      <textarea class="form-control mb-1" id="messageArea" rows="3"></textarea>
+      <label class="fw-light" style="font-size: 14px">Add additional notes here.</label>
+    </div>
+
+  </div>
+
+  <div class="card-footer d-flex justify-content-end">
+    <div>
+      <button type="button" class="btn btn-secondary">Cancel</button>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+</form>
+</div>
+
+<script>
+  (() => {
+  'use strict'
+
+  const forms = document.querySelectorAll('.needs-validation')
+
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+</body>
 </html>
